@@ -51,6 +51,9 @@ function getWinner(playerMove,computerMove) {
     else if (playerMove === 'paper' && computerMove === 'scissors') {winner = 'computer';}
     else if (playerMove === 'paper' && computerMove === 'rock') {winner = 'player';}
     else if (playerMove === 'paper' && computerMove === 'paper') {winner = 'tie';}
+    else {
+        console.log ('You're wrong.');
+    }
     return winner;
 }
 
