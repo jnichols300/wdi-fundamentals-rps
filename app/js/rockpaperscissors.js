@@ -22,6 +22,7 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
+    var playerMove
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
@@ -29,6 +30,7 @@ function getPlayerMove(move) {
 }
 
 function getComputerMove(move) {
+    var move
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
@@ -74,21 +76,14 @@ function playToFive() {
         var roundWinner = getWinner(playerChose, computerChose);
         if (roundWinner === 'player') {
             playerWins +=  1;
-          	//these two console.log must be in each condition because if score is only 
-          	//updated after the condition is true.
         	console.log('Player chose ' + playerChose + ' while Computer chose ' + computerChose);
         	console.log('The score is currently ' + playerWins + ' to ' + computerWins);
         } else if (roundWinner === 'computer') {
             computerWins += 1;
-          	//these two console.log must be in each condition because if score is only 
-          	//updated after the condition is true.
           	console.log('Player chose ' + playerChose + ' while Computer chose ' + computerChose);
         	console.log('The score is currently ' + playerWins + ' to ' + computerWins);
         } 
     }
-  	//you need to return something, so that when you call the function, it return something
-  	//we can ignore [playerWins, computerWins] since we already print it about for each game
-  	//cuz the pre-setup function have it, so I/we should keep it.
     if (playerWins === 5) {
         return "You win! " + [playerWins, computerWins];
     } else if (computerWins === 5) {
